@@ -42,8 +42,11 @@ public class OfficeHourSchedule
     {
         // put your code here
         
-        if (officeHours.steam() 
-                             .filter(s-> 
+        if (officeHours.stream()
+                       .filter(OfficeHour -> instructor.getduration().eqeals(minutes)));{
+        return true;}
+        
+        return false;
     }
     
     /**
@@ -75,7 +78,7 @@ public class OfficeHourSchedule
         OfficeHour.stream()
                   .filter(officeHours ->officeHours.getStartHour(hour))
                   .filter(officeHours ->officeHours.getCampus(campus))
-                  .map(officeHours -> officeHours.add(file))
+                  .map(officeHours -> officeHours.add(file)
                   .removeif(this.instructor.equals(this.instructor))
                   .reduce()
                   file.forEach(file -> System.out.println(file))
